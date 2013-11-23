@@ -7,3 +7,4 @@
 
 # intelij Files
 *.iml
+.idea/*
