@@ -5,7 +5,11 @@ import java.util.List;
 
 public abstract class Pizza {
     protected PizzaType type;
-    private List<ToppingType> toppings = new ArrayList<>();
+    protected String name;
+    protected String dough;
+    protected String sauce;
+
+    protected List<ToppingType> toppings = new ArrayList<>();
 
     public Pizza(PizzaType type) {
         this.type = type;
@@ -31,5 +35,20 @@ public abstract class Pizza {
 
     public void box() {
         System.out.println("Place pizza into official PizzaStore box");
+    }
+
+    public List<ToppingType> getToppings() {
+        return toppings;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDough() {
+        return dough;
+    }
+    public String getSauce() {
+        return sauce;
     }
 }
