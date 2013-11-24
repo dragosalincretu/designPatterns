@@ -3,11 +3,6 @@ package sample.design.patterns.factoryMethod.common;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * User: Dragos Alin Cretu
- * Date: 2013/11/20
- * Time: 1:07 AM
- */
 public abstract class Pizza {
     protected PizzaType type;
     private List<ToppingType> toppings = new ArrayList<>();
