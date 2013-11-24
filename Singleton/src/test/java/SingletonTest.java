@@ -2,11 +2,6 @@ import org.junit.Test;
 
 import static org.fest.assertions.Assertions.assertThat;
 
-/**
- * User: Dragos Alin Cretu
- * Date: 2013/11/14
- * Time: 11:16 PM
- */
 public class SingletonTest {
     @Test
     public void testGetVisitNumber() {
