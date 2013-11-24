@@ -1,3 +1,5 @@
+package sample.design.patterns.factoryMethod.common;
+
 import java.util.ArrayList;
 import java.util.List;
 

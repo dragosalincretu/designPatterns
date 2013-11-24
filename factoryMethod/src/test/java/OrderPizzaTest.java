@@ -1,8 +1,11 @@
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import sample.design.patterns.factoryMethod.belgium.*;
+import sample.design.patterns.factoryMethod.common.Pizza;
+import sample.design.patterns.factoryMethod.common.PizzaStore;
+import sample.design.patterns.factoryMethod.common.PizzaType;
+import sample.design.patterns.factoryMethod.romania.*;
 
 import static org.fest.assertions.Assertions.assertThat;
 
@@ -11,7 +14,6 @@ import static org.fest.assertions.Assertions.assertThat;
  * Date: 2013/11/20
  * Time: 1:06 AM
  */
-@RunWith(MockitoJUnitRunner.class)
 public class OrderPizzaTest {
     private Pizza pizza;
     PizzaStore belgianPizzaStore;

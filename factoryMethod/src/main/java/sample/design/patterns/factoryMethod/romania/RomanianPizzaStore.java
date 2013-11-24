@@ -1,3 +1,9 @@
+package sample.design.patterns.factoryMethod.romania;
+
+import sample.design.patterns.factoryMethod.common.Pizza;
+import sample.design.patterns.factoryMethod.common.PizzaStore;
+import sample.design.patterns.factoryMethod.common.PizzaType;
+
 /**
  * User: Dragos Alin Cretu
  * Date: 2013/11/20
