@@ -3,7 +3,7 @@
  * Date: 2013/11/20
  * Time: 1:19 AM
  */
-public class BelgianPizzaStore implements PizzaStore {
+public class BelgianPizzaStore extends PizzaStore {
     @Override
     public Pizza createPizza(PizzaType pizzaType) {
         switch (pizzaType) {

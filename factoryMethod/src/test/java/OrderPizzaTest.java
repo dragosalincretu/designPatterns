@@ -1,5 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.runners.MockitoJUnitRunner;
 
 import static org.fest.assertions.Assertions.assertThat;
 
@@ -8,10 +11,16 @@ import static org.fest.assertions.Assertions.assertThat;
  * Date: 2013/11/20
  * Time: 1:06 AM
  */
+@RunWith(MockitoJUnitRunner.class)
 public class OrderPizzaTest {
     private Pizza pizza;
     PizzaStore belgianPizzaStore;
     PizzaStore romanianPizzaStore;
+
+    @Mock
+    private Pizza mokedPizza;
+    @Mock
+    private RomanianPizzaStore mokedPizzaStore;
 
     @Before
     public void setUp(){
@@ -21,48 +30,48 @@ public class OrderPizzaTest {
 
     @Test
     public void test_RomanianVegetarianPizza(){
-        pizza = romanianPizzaStore.createPizza(PizzaType.VEGETARIAN);
+        pizza = romanianPizzaStore.orderPizza(PizzaType.VEGETARIAN);
         assertThat(pizza).isInstanceOf(RomanianVegetarianPizza.class);
     }
 
     @Test
     public void test_RomanianQuattroFormaggiPizza(){
-        pizza = romanianPizzaStore.createPizza(PizzaType.QUATTRO_FORMAGGI);
+        pizza = romanianPizzaStore.orderPizza(PizzaType.QUATTRO_FORMAGGI);
         assertThat(pizza).isInstanceOf(RomanianQuattroFormaggiPizza.class);
     }
 
     @Test
     public void test_RomanianQuattroStagioniPizza(){
-        pizza = romanianPizzaStore.createPizza(PizzaType.QUATTRO_STAGIONI);
+        pizza = romanianPizzaStore.orderPizza(PizzaType.QUATTRO_STAGIONI);
         assertThat(pizza).isInstanceOf(RomanianQuattroStagioniPizza.class);
     }
 
     @Test
     public void test_RomanianBaconPizza(){
-        pizza = romanianPizzaStore.createPizza(PizzaType.BACON);
+        pizza = romanianPizzaStore.orderPizza(PizzaType.BACON);
         assertThat(pizza).isInstanceOf(RomanianBaconPizza.class);
     }
 
     @Test
     public void test_BelgianVegetarianPizza(){
-        pizza = belgianPizzaStore.createPizza(PizzaType.VEGETARIAN);
+        pizza = belgianPizzaStore.orderPizza(PizzaType.VEGETARIAN);
         assertThat(pizza).isInstanceOf(BelgianVegetarianPizza.class);
     }
     @Test
     public void test_BelgianQuattroFormaggiPizza(){
-        pizza = belgianPizzaStore.createPizza(PizzaType.QUATTRO_FORMAGGI);
+        pizza = belgianPizzaStore.orderPizza(PizzaType.QUATTRO_FORMAGGI);
         assertThat(pizza).isInstanceOf(BelgianQuattroFormaggiPizza.class);
     }
 
     @Test
     public void test_BelgianQuattroStagioniPizza(){
-        pizza = belgianPizzaStore.createPizza(PizzaType.QUATTRO_STAGIONI);
+        pizza = belgianPizzaStore.orderPizza(PizzaType.QUATTRO_STAGIONI);
         assertThat(pizza).isInstanceOf(BelgianQuattroStagioniPizza.class);
     }
 
     @Test
     public void test_BelgianBaconPizza(){
-        pizza = belgianPizzaStore.createPizza(PizzaType.BACON);
+        pizza = belgianPizzaStore.orderPizza(PizzaType.BACON);
         assertThat(pizza).isInstanceOf(BelgianBaconPizza.class);
     }
 }
