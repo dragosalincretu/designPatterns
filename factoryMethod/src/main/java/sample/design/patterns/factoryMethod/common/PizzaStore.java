@@ -1,10 +1,10 @@
 package sample.design.patterns.factoryMethod.common;
 
 public abstract class PizzaStore {
-    public abstract Pizza createPizza(PizzaType pizzaType);
+    protected PizzaStoreBakery pizzaStoreBakery;
 
     public Pizza orderPizza(PizzaType pizzaType){
-        Pizza pizza = createPizza(pizzaType);
+        Pizza pizza = pizzaStoreBakery.createPizza(pizzaType);
 
         pizza.prepare();
         pizza.bake();
@@ -12,5 +12,9 @@ public abstract class PizzaStore {
         pizza.box();
 
         return pizza;
+    }
+
+    protected void setPizzaStoreBakery(PizzaStoreBakery pizzaStoreBakery) {
+        this.pizzaStoreBakery = pizzaStoreBakery;
     }
 }
