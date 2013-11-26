@@ -5,14 +5,14 @@ import sample.design.patterns.abstractFactory.common.ingredients.*;
 import static java.lang.System.out;
 
 public abstract class Pizza {
+    protected PizzaIngredientFactory pizzaIngredientFactory;
     private String name;
-
-    private Dough dough;
-    private Sauce sauce;
-    private Veggies veggies;
-    private Cheese cheese;
-    private Pepperoni pepperoni;
-    private Clams clams;
+    protected Dough dough;
+    protected Sauce sauce;
+    protected Veggies[] veggies;
+    protected Cheese cheese;
+    protected Pepperoni pepperoni;
+    protected Clams clams;
     public abstract void prepare();
 
     public void bake() {
@@ -33,5 +33,29 @@ public abstract class Pizza {
 
     public String getName() {
         return name;
+    }
+
+    public Dough getDough() {
+        return dough;
+    }
+
+    public Sauce getSauce() {
+        return sauce;
+    }
+
+    public Veggies[] getVeggies() {
+        return veggies;
+    }
+
+    public Cheese getCheese() {
+        return cheese;
+    }
+
+    public Pepperoni getPepperoni() {
+        return pepperoni;
+    }
+
+    public Clams getClams() {
+        return clams;
     }
 }

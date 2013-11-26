@@ -26,7 +26,7 @@ public class BelgiumPizzaIngredientFactoryTest {
 
     @Test
     public void testCreteCheese() throws Exception {
-         assertThat(pizzaIngredientFactory.creteCheese()).isInstanceOf(ReggianoCheese.class);
+         assertThat(pizzaIngredientFactory.createCheese()).isInstanceOf(ReggianoCheese.class);
     }
 
     @Test

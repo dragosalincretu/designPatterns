@@ -14,7 +14,7 @@ public class BelgiumPizzaIngredientFactory implements PizzaIngredientFactory{
     }
 
     @Override
-    public Cheese creteCheese() {
+    public Cheese createCheese() {
         return new ReggianoCheese();
     }
 

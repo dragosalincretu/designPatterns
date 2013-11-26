@@ -2,7 +2,6 @@ package sample.design.patterns.abstractFactory.romania.ingredients;
 
 import org.junit.Before;
 import org.junit.Test;
-import sample.design.patterns.abstractFactory.belgium.ingredients.FreshClams;
 import sample.design.patterns.abstractFactory.common.ingredients.*;
 
 import static org.fest.assertions.Assertions.assertThat;
@@ -27,7 +26,7 @@ public class RomaniaPizzaIngredientFactoryTest {
 
     @Test
     public void testCreteCheese() throws Exception {
-        assertThat(pizzaIngredientFactory.creteCheese()).isInstanceOf(MozzarellaCheese.class);
+        assertThat(pizzaIngredientFactory.createCheese()).isInstanceOf(MozzarellaCheese.class);
     }
 
     @Test
