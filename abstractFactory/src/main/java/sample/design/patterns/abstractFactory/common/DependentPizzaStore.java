@@ -10,29 +10,29 @@ import sample.design.patterns.abstractFactory.romania.RomanianStylePepperoniPizz
 import sample.design.patterns.abstractFactory.romania.RomanianStyleVeggiePizza;
 
 public class DependentPizzaStore {
-    public Pizza createPizza (String style, String type) {
+    public Pizza createPizza (PizzaStyle style, PizzaType type) {
         Pizza pizza = null;
-        if (style.equals("Romania")) {
+        if (style == PizzaStyle.ROMANIAN) {
             switch (type) {
-                case "cheese" : pizza = new RomanianStyleCheesePizza();
+                case CHEESE : pizza = new RomanianStyleCheesePizza();
                     break;
-                case "veggie" : pizza = new RomanianStyleVeggiePizza();
+                case VEGGIE : pizza = new RomanianStyleVeggiePizza();
                     break;
-                case "clam" : pizza = new RomanianStyleClamPizza();
+                case CLAM : pizza = new RomanianStyleClamPizza();
                     break;
-                case "pepperoni" : pizza = new RomanianStylePepperoniPizza();
+                case PEPPERONI : pizza = new RomanianStylePepperoniPizza();
                     break;
             }
         }
-        if (style.equals("Belgium")) {
+        if (style == PizzaStyle.BELGIAN) {
             switch (type) {
-                case "cheese" : pizza = new BelgianStyleCheesePizza();
+                case CHEESE : pizza = new BelgianStyleCheesePizza();
                     break;
-                case "veggie" : pizza = new BelgianStyleVeggiePizza();
+                case VEGGIE : pizza = new BelgianStyleVeggiePizza();
                     break;
-                case "clam" : pizza = new BelgianStyleClamPizza();
+                case CLAM : pizza = new BelgianStyleClamPizza();
                     break;
-                case "pepperoni" : pizza = new BelgianStylePepperoniPizza();
+                case PEPPERONI : pizza = new BelgianStylePepperoniPizza();
                     break;
             }
         }

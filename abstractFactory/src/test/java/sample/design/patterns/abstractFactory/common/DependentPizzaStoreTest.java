@@ -24,49 +24,49 @@ public class DependentPizzaStoreTest {
 
     @Test
     public void testCreateBelgianStyleCheesePizza() throws Exception {
-        pizza = pizzaStore.createPizza("Belgium", "cheese");
+        pizza = pizzaStore.createPizza(PizzaStyle.BELGIAN, PizzaType.CHEESE);
         assertThat(pizza).isInstanceOf(BelgianStyleCheesePizza.class);
     }
 
     @Test
     public void testCreateBelgianStyleVeggiePizza() throws Exception {
-        pizza = pizzaStore.createPizza("Belgium", "veggie");
+        pizza = pizzaStore.createPizza(PizzaStyle.BELGIAN, PizzaType.VEGGIE);
         assertThat(pizza).isInstanceOf(BelgianStyleVeggiePizza.class);
     }
 
     @Test
     public void testCreateBelgianStyleClamPizza() throws Exception {
-        pizza = pizzaStore.createPizza("Belgium", "clam");
+        pizza = pizzaStore.createPizza(PizzaStyle.BELGIAN, PizzaType.CLAM);
         assertThat(pizza).isInstanceOf(BelgianStyleClamPizza.class);
     }
 
     @Test
     public void testCreateBelgianStylePepperoniPizza() throws Exception {
-        pizza = pizzaStore.createPizza("Belgium", "pepperoni");
+        pizza = pizzaStore.createPizza(PizzaStyle.BELGIAN, PizzaType.PEPPERONI);
         assertThat(pizza).isInstanceOf(BelgianStylePepperoniPizza.class);
     }
 
     @Test
     public void testCreateRomanianStyleCheesePizza() throws Exception {
-        pizza = pizzaStore.createPizza("Romania", "cheese");
+        pizza = pizzaStore.createPizza(PizzaStyle.ROMANIAN, PizzaType.CHEESE);
         assertThat(pizza).isInstanceOf(RomanianStyleCheesePizza.class);
     }
 
     @Test
     public void testCreateRomanianStyleVeggiePizza() throws Exception {
-        pizza = pizzaStore.createPizza("Romania", "veggie");
+        pizza = pizzaStore.createPizza(PizzaStyle.ROMANIAN, PizzaType.VEGGIE);
         assertThat(pizza).isInstanceOf(RomanianStyleVeggiePizza.class);
     }
 
     @Test
     public void testCreateRomanianStyleClamPizza() throws Exception {
-        pizza = pizzaStore.createPizza("Romania", "clam");
+        pizza = pizzaStore.createPizza(PizzaStyle.ROMANIAN, PizzaType.CLAM);
         assertThat(pizza).isInstanceOf(RomanianStyleClamPizza.class);
     }
 
     @Test
     public void testCreateRomanianStylePepperoniPizza() throws Exception {
-        pizza = pizzaStore.createPizza("Romania", "pepperoni");
+        pizza = pizzaStore.createPizza(PizzaStyle.ROMANIAN, PizzaType.PEPPERONI);
         assertThat(pizza).isInstanceOf(RomanianStylePepperoniPizza.class);
     }
 }
