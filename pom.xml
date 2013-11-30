@@ -12,6 +12,7 @@
         <module>singleton</module>
         <module>factoryMethod</module>
         <module>abstractFactory</module>
+        <module>builder</module>
     </modules>
 
     <dependencyManagement>
